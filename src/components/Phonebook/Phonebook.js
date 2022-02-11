@@ -11,6 +11,7 @@ class Phonebook extends Component {
 	formSubmit = e => {
 		e.preventDefault();
 		this.props.addContact(this.state);
+		this.reset();
 	};
 
 	inputName = e => {
@@ -21,6 +22,10 @@ class Phonebook extends Component {
 	inputNumber = e => {
 		this.setState({ number: e.target.value });
 	};
+
+	reset = () => {
+        this.setState({ name: '', number: '' })
+    };
 
 	render() {
 		const { name, number } = this.state;

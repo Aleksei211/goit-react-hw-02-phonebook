@@ -11,7 +11,7 @@ import s from './components/Contacts/Contacts.module.css'
 
 class App extends Component{
   state = {
-  contacts: contacts,
+   contacts,
   filter: '',
 
   };
@@ -35,9 +35,6 @@ class App extends Component{
       contacts: [contact, ...prevState.contacts],
     }))
    
-    
-    values.name = '';
-    values.number = '';
   };
 
   	deleteContact = cardId => {
